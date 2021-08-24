@@ -26,23 +26,91 @@
         color: white;
         text-decoration: none;
       }
-      .sh-second-nav {
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      nav {
         height: 100px;
+        display: flex;
         width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        background-color: lightcoral;
+      }
+      .sh-logo {
+        background-color: lightcyan;
+        padding-left: 3px;
+        width: 45%;
+      }
+      nav {
+        position: sticky;
+      }
+      .sh-second-nav {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        background-color: lightseagreen;
+
+        font-family: sans-serif;
+      }
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        position: relative;
+      }
+      .sh-second-nav a::before {
+        content: "";
+        left: 0;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background-color: rgb(34, 34, 22);
+        position: absolute;
+      }
+      .sh-second-nav a:hover::before {
+        width: 50%;
+      }
+      .contact-info {
+        display: flex;
+        align-items: center;
+        border: 1px solid blue;
+        width: 12%;
+        height: 40px;
+      }
+      .contact-info p {
+        margin: auto;
+        font-family: sans-serif;
+        font-size: 20px;
+      }
+      a {
+        width: 25%;
+      }
+      .divider {
+        border-left: 1px solid rgb(163, 135, 129);
+        height: 40px;
+      }
+      .horizontal-divider {
+        border-top: 10px solid rgb(108, 17, 194);
+        width: 100%;
+      }
+      .sh-img-cont {
+        height: 1000px;
+        width: 100%;
+        background-color: yellowgreen;
+      }
+      #sh-main-div {
+        width: 100%;
+        height: 150px;
       }
     </style>
   </head>
   <body>
-    <div id="sh-main-div">
-      <div class="sh-top-bar">
-        <div><a href="#" class="sh-hover-me">Get support</a></div>
-      </div>
-      <div class="sh-second-nav">
-        <a href="#" class="sh-hover">Get support</a>
-        <a href="#" class="sh-hover">Get support</a>
-        <a href="#" class="sh-hover">Get support</a>
-        <a href="#" class="sh-hover">Get support</a>
-      </div>
-    </div>
+    <div class="sh-img-cont"></div>
+    <div class="sh-img-cont1"></div>
+
+    <script></script>
   </body>
 </html>
