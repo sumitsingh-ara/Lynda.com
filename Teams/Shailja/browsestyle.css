@@ -2,7 +2,7 @@
     /* margin: 0% 20% 0% 20%; */
 }
 
-.topic-section {
+#topic-section {
     margin: 2%;
     text-align: center;
     border-bottom: 0.5 solid grey;
@@ -18,7 +18,7 @@
 
 .show {
     color: #006097;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 #box-container {
@@ -33,7 +33,7 @@ text-align: center;
 
 }
 h2{
-    font-size:20px;
+    font-size:18px;
 }
 .box
 
@@ -45,4 +45,5 @@ p{
 }
 a:hover{
     color:black;
+    cursor: pointer;
 }
