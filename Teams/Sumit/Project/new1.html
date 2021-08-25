@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            background-color:blue;
+            width:80%;
+            height: 400px;
+            margin:auto;
+        }
+        #headingVideos {
+            width:98%;
+            margin:auto;
+            font-size:25px;
+        }
+        #videosPlay{
+            width:98%;
+            margin:auto;
+            background-color:lightblue;
+            height:42%;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+            border: 2px solid rgb(0, 156, 26);
+        }
+        #videosPlay div{
+            display: inline;
+            flex-direction: row;
+            margin:0% 1%;
+        }
+        #content {
+            width:98%;
+            height:45%;
+            margin:auto;
+            background-color: aqua;
+            margin-top: 10px;
+            display: flex;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="headingVideos">Most Good Picked</div>
+        <div id ="videosPlay">
+
+        </div>
+        <!-- content -->
+        <div id="content">
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
+<script>
+    
+    let productsPicks = [
+        {
+            title: "JAVA SCRIPT",
+            name: "Learning the Java Script Promises",
+            by: "By: Swanand",
+            date: "19th August 2021",
+            video: "C:/Users/Sumit/Desktop/VideosLocal/Promises.mp4",
+            link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+            time: 30,
+        },
+        {
+            title: "GIT",
+            name: "Learning Git Branching",
+            by: "By: Nrupul Dev",
+            date: "24th August 2021",
+            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_3.mp4",
+            link: "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/GitHub",
+            time: 29,
+        },
+        {
+            title: "JAVA SCRIPT",
+            name: "Learning How JS Works",
+            by: "By: Swanand",
+            date: "16th August 2021",
+            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_4.mp4",
+            link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+            time: 124,
+        },
+        {
+            title: "JAVA SCRIPT",
+            name: "Learning the Concepts of DOM",
+            by: "By: Swanand",
+            date: "17th August 2021",
+            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_2.mp4",
+            link: "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
+            time: 91,
+        },
+        {
+            title: "JAVA SCRIPT",
+            name: "Learning the Java Script Promises",
+            by: "By: Swanand",
+            date: "19th August 2021",
+            video: "C:/Users/Sumit/Desktop/VideosLocal/Promises.mp4",
+            link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+            time: 30,
+        },
+        {
+            title: "GIT",
+            name: "Learning Git Branching",
+            by: "By: Nrupul Dev",
+            date: "24th August 2021",
+            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_3.mp4",
+            link: "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/GitHub",
+            time: 29,
+        },
+        {
+            title: "JAVA SCRIPT",
+            name: "Learning How JS Works",
+            by: "By: Swanand",
+            date: "16th August 2021",
+            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_4.mp4",
+            link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+            time: 124,
+        },
+        {
+            title: "JAVA SCRIPT",
+            name: "Learning the Concepts of DOM",
+            by: "By: Swanand",
+            date: "17th August 2021",
+            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_2.mp4",
+            link: "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
+            time: 91,
+        },
+        {
+            title: "JAVA SCRIPT",
+            name: "Learning the Concepts of DOM",
+            by: "By: Swanand",
+            date: "17th August 2021",
+            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_2.mp4",
+            link: "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
+            time: 91,
+        },
+        {
+            title: "JAVA SCRIPT",
+            name: "Learning the Java Script Promises",
+            by: "By: Swanand",
+            date: "19th August 2021",
+            video: "C:/Users/Sumit/Desktop/VideosLocal/Promises.mp4",
+            link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+            time: 30,
+        },
+        {
+            title: "GIT",
+            name: "Learning Git Branching",
+            by: "By: Nrupul Dev",
+            date: "24th August 2021",
+            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_3.mp4",
+            link: "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/GitHub",
+            time: 29,
+        },
+        {
+            title: "JAVA SCRIPT",
+            name: "Learning How JS Works",
+            by: "By: Swanand",
+            date: "16th August 2021",
+            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_4.mp4",
+            link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+            time: 124,
+        },
+        {
+            title: "JAVA SCRIPT",
+            name: "Learning the Concepts of DOM",
+            by: "By: Swanand",
+            date: "17th August 2021",
+            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_2.mp4",
+            link: "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
+            time: 91,
+        },
+    ]
+    localStorage.setItem("myCoursePicks", JSON.stringify(productsPicks))
+
+    var showPicks = localStorage.getItem("myCoursePicks")
+    showPicks = JSON.parse(showPicks);
+
+    function showProducts(){
+        
+
+        showPicks.forEach(function(product){
+            let content_div = document.createElement("div");
+            let vid_div = document.createElement("div");
+            vid_div.setAttribute("class","videoBoxSU")
+            let vids = document.createElement("VIDEO");
+            vids.src = product.video;
+            vids.setAttribute("width", "20%");
+            vids.setAttribute("height", "100%");
+            vids.setAttribute("controls", "controls");
+            vids.setAttribute("id", "videoPlayerNew");
+
+            let names = document.createElement("p")
+            names.innerText = product.name;
+            let title = document.createElement("p")
+            title.textContent = product.title
+
+            vid_div.appendChild(vids);
+            content_div.append(names)
+            document.getElementById("videosPlay").append(vid_div)
+            document.getElementById("content").append(names);
+
+        })
+    }
+    showProducts()
+</script>

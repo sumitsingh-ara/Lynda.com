@@ -342,6 +342,9 @@
             font-family: 'Open Sans', sans-serif;
             letter-spacing: 2px;
         }
+        #trial:hover{
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -445,13 +448,12 @@
 
 </html>
 <script>
-
-        var count =0;
-
+var count =0;
+        var counter =0;
         function startTimer(){
 
-            var timeleft = 5;
-            var hoursLeft = 2592000;
+            var timeleft = 1;
+            var hoursLeft = 5;
             if(count == 0){
                 if(count ==0){
                 var downloadTimer = setInterval(function set() {
@@ -467,14 +469,15 @@
                 timeleft -= 1;
                 }, 1000);
             }
-            
+         
             function showTrial() {
                 var showTimer = setInterval(function show() {
                 if(hoursLeft <= 0){
                 clearInterval(showTimer);
                 alert("Trial Ended")
-                    
+                counter++;
                 document.getElementById('trial').innerHTML ="Buy Pro Membership"
+                
                 count++;
                 } else {
                     let mins =0;
@@ -497,13 +500,13 @@
                     if(store < 10){
                         store = "0"+store
                     }
-                document.getElementById("trial").innerHTML = hr+" : "+mins+": "+store ;
+                document.getElementById("trial").innerHTML ="Trial left "+ hr+" : "+mins+" : "+store ;
                 }
                 hoursLeft -= 1;
                 }, 1000);
             }
             }
-            else{
+            else if(counter >0) {
                 window.location.href ="proMembership.html"
             }
         }
