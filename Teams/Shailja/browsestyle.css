@@ -1,0 +1,48 @@
+#main-container {
+    /* margin: 0% 20% 0% 20%; */
+}
+
+.topic-section {
+    margin: 2%;
+    text-align: center;
+    border-bottom: 0.5 solid grey;
+}
+
+#heading {
+    font-size: 20px;
+}
+
+.top-show {
+    margin-left: 60%;
+}
+
+.show {
+    color: #006097;
+    font-size: 20px;
+}
+
+#box-container {
+    display:grid;
+ 
+}
+
+
+.box-row {
+display:flex;
+text-align: center;
+
+}
+h2{
+    font-size:20px;
+}
+.box
+
+{
+    padding:3%;
+}
+p{
+    color:grey;
+}
+a:hover{
+    color:black;
+}
