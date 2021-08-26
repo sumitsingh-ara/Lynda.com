@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <style>
+         body {
+            margin: 0px;
+            background-color: #f5f5f5;
+        }
+        #nav-bar {
+            width: 100%;
+            height:50px;
+            background-color:#283e4a;
+            display: flex;
+        }
+        .logo{
+            width:20%;
+            height:30px;
+            padding-top: 13px;
+            margin-left: 15%;
+            display: flex;
+            overflow:inherit;
+        }
+        .linkedin-logo-sus {
+            background-color: #1976D2;
+            color: white;
+            width: 22px;
+            max-height: 20px;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .secure{
+            color:white;
+            letter-spacing:1px;
+            display:flex;
+            padding-top:4px;
+            margin-left:5px;
+            overflow:hidden;
+        }
+        .lock{
+            font-size:medium;
+            margin-left:5px;
+        }
+        .setting{
+            font-size:xx-large;
+          margin-left:50%;
+          padding-top: 10px;
+        }
+        .setting:hover{
+            font-weight: bold;
+            cursor: pointer;
+            color: #9E9E9E;
+            
+        }
+        .checkout{
+            width:48%;
+            margin:auto;
+            height:90px;
+            margin-top: 20px;
+            display:grid;
+            grid-template-columns:35% 65%;
+            font-size: 25px;
+        }
+        .checkout div:nth-child(1){
+            background-color: #398b18;
+            padding: 10%;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+            
+        }   
+        .checkout div:nth-child(2){
+            background-color: white;
+            padding: 16px;
+            font-size: 20px;
+        }  
+        /* body 2nd checkout */
+        .checkout2{
+            width:48%;
+            margin:auto;
+            height:30px;
+            margin-top: 20px;
+            display:flex;
+        }
+        #number{
+            width:30px;
+            height:30px; 
+            border-radius: 20px;
+            background-color:#398b18;
+            color: white;
+            text-align: center;
+            font-size:25px;
+        }
+        .items{
+            font-size:20px;
+            line-height: 30px;
+            margin-left: 5%;
+        }
+        /* 3rd checkout */
+        #checkout3{
+            width:48%;
+            margin:auto;
+            height:350px;
+            margin-top: 20px;
+            border: 1px solid rgb(173, 170, 170);
+        }
+        .firstBox{
+            width:100%;
+            display:flex;
+            height:30%;
+            border-bottom: 1px solid rgb(173, 170, 170);
+            background-color:white;
+        }
+        .videoBox{
+            width:25%;
+            height:100%;
+            margin-left:2%;
+        }
+        .contentBox{
+            width: 50%;
+            height:100%;
+            margin-left: 2%;
+        }
+        .contentBox p{
+           margin:10px;
+        }
+        .name-s{
+          font-weight: 300;
+            font-size: 22px;
+        }
+        .by-s{
+            color:#607D8B;
+        }
+        .title-s{
+            color:#607D8B;
+            font-size: 10px;
+        }
+        .totalCalc{
+            width:15%;
+            height:100%;
+            margin-left:2%;
+            padding-left:2%;
+        }
+        .priceB{
+            width:60%;
+            margin-left:40%;
+            font-size:20px;
+        }
+      
+       .showCase{
+           width:100%;
+           height:50%;
+           background-color:white;
+
+       }
+       .intro{
+            font-size:20px;
+            margin-left:2%;
+            margin-top: 1%;
+       }
+       .bigBoss{
+           width:100%;
+           height:82%;
+           display: grid;
+           grid-template-columns: 50% 50%;
+       }
+       .lefter div{
+           margin-top: 4%;
+           font-size:15px;
+           margin-left:4%;
+           letter-spacing:1px;
+       }
+       .righter div{
+           margin-top: 4%;
+           font-size:15px;
+           margin-left:4%;
+       }
+       .genuine{
+           padding-left:10px;
+           padding-top: 5px;
+       }
+       /* checkout 4 */
+       #checkout4{
+            width:48%;
+            margin:auto;
+            height:90px;
+            margin-top: 20px;
+            border: 1px solid rgb(173, 170, 170);
+            display: grid;
+            grid-template-rows: 50%;
+            background-color:white;
+            
+        }
+        .frst{
+            width: 90%;
+            margin-left:5%;
+            display:grid;
+            grid-template-columns: 80% 20%;
+        }
+        .scnd{
+            width: 90%;
+            margin-left:5%;
+            display:grid;
+            grid-template-columns: 80% 20%;
+            border-top:1px solid rgb(173, 170, 170);
+        }
+        .est{
+            width: 100%;
+            height: 100%;
+            line-height:40px;
+        }
+        #totalsDone{
+            padding-left:50%;
+        }
+        .total{
+            width: 100%;
+            height: 100%;
+            line-height:40px;
+            font-weight: bold;
+        }
+        #totalsDoneS{
+            padding-left:50%;
+            font-weight: bold;
+        }
+        /* payment gateway credit section */
+        #checkout6{
+            width:48%;
+            margin:auto;
+            height:620px;
+            margin-top: 20px;
+            border: 1px solid rgb(173, 170, 170);
+            background-color:white;
+        }
+        .card-logo{
+            width:100%;
+            border-bottom:1px solid rgb(173, 170, 170);
+            height:70px;
+            display: flex;
+        }
+        .americanExpress{
+            margin-top:15px;
+            margin-left: 10px;
+            max-width:25%;
+            max-height:40px;
+        }
+        .masterCard{
+            margin-top:20px;
+            margin-left: 10px;
+            min-width:5%;
+            max-height:30px;
+        }
+        /* form input */
+        form{
+            width: 60%;
+            margin:5px auto;
+            font-size:16px;
+            
+        }
+        .blue{
+            color: #1976D2;
+        }
+        input{
+            margin-top: 2px;
+            width:98%;
+            height:30px;
+        }
+        .smallText{
+            font-size:13px;
+            height:15px;
+            margin-bottom: 2px;
+        }
+        .cvvExpireBox{
+            width:100%;
+            height:80px;
+            display:flex;
+        }
+        .cvvExpireBox input{
+            margin-top: 2px;
+            width:96%;
+            height:30px;
+        }
+        .expiry{
+            width:35%;
+            height:100%;
+        }
+        .cvv{
+            width:50%;
+            height:100%;
+            margin-left:15%;
+        }
+        #country{
+            width:100%;
+            font-size:15px;
+            height:30px;
+        }
+        #country option{
+            width:100%;
+            font-size:15px;
+        }
+        .postalBox{
+            width:100%;
+            margin-top: 10px;;
+            height:80px;
+            display:flex;
+        }
+        .postalBox input{
+            margin-top: 2px;
+            width:96%;
+            height:30px;
+        }
+        #submit{
+            width:35%;
+            height:40px;
+            margin:20px auto;
+            margin-left:30%;
+            border: none;
+            background-color: #0073b1;
+            color: white;
+            font-size: 18px;
+        }
+        #submit:hover{
+            background-color:#0D47A1;
+            cursor: pointer;
+        }
+        #checkout8{
+            width:48%;
+            margin:auto;
+            height:300px;
+            margin-top: 20px;
+            border: 1px solid rgb(173, 170, 170);
+            background-color:white;
+        }
+        .reviewBullet{
+            width:90%;
+            margin:auto;
+            margin-top: 10px;
+        }
+        .reviewBullet p{
+            margin:5px;
+        }
+        .generalInform{
+            width:87%;
+            margin:auto;
+            height:70px;
+            margin-top: 10px;
+            font-size: 14px;
+            padding-left:25px;
+            background-color:#f2f6f9;
+            font-weight: 100;
+            padding-top: 10px;
+        }
+        .placeOrder{
+            width:20%;
+            height:40px;
+            margin:20px auto;
+            margin-left:40%;
+            border: none;
+            background-color: #0073b1;
+            color: white;
+            font-size: 18px;
+        }
+        .placeOrder:hover{
+            background-color:#0D47A1;
+            cursor: pointer;
+        }
+        .lowersecure a{
+            text-decoration: none;
+            color: rgb(102, 98, 98);
+        }
+        .lowersecure{
+            width:20%;
+            margin:auto;
+            font-size:18px;
+            display:flex;
+        }
+        .newlock{
+            font-size: 20px;
+        
+        }
+        .lowersecure:hover{
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="nav-bar">
+        <div class="logo">
+            <div class="linkedin-logo-sus">
+                in
+            </div>
+            <div class="secure">
+                <i class="material-icons lock">lock</i>
+                <div>SECURE CHECKOUT</div>
+                
+            </div>
+           
+        </div>
+        <i class="material-icons setting">settings</i>
+    </div>
+   <!-- Body 1st-->
+   <div class="checkout">   
+        <div>Checkout</div>
+        <div>Hello Person,you're a step closer to advancing your career!</div>
+   </div>
+   <!-- 2nd -->
+   <div class="checkout2">
+       <div id="number">1</div>
+       <div class="items">Items in your cart</div>
+   </div>
+   <!-- 3rd -->
+   <div id="checkout3">
+   </div>
+   <!-- 4th -->
+   <div id="checkout4">
+        <div class="frst">
+            <div class="est">Estimated tax (18%)</div>
+            <div id="totalsDone"></div>
+        </div>
+        <div class="scnd">
+            <div class="total">Today's total</div>
+            <div id="totalsDoneS"></div>
+        </div>
+   </div>
+   <!-- checkout 5 -->
+    <div class="checkout2">
+        <div id="number">2</div>
+        <div class="items">Payment</div>
+    </div>
+    <!-- Checout 6 credit cards section -->
+    <div onclick= remove() id="checkout6">
+       <div class="card-logo">
+        <img class="americanExpress" src="https://s1.q4cdn.com/692158879/files/images/brand_imagery/AXP_BlueBoxLogo_EXTRALARGEscale_RGB_DIGITAL_1600x1600.png" alt="">
+        <img class="masterCard" src="https://logos-world.net/wp-content/uploads/2020/09/Mastercard-Symbol.jpg" alt="">
+        <img class="masterCard" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Visa.svg/1200px-Visa.svg.png" alt="">
+       </div>
+       <!-- Input Part -->
+       <form onsubmit="submitForm(event)" >
+           <label >First name<sup class="blue">*</sup></label> <br>
+           <input onclick="fName()" id="firstName" type="text" required>
+           <div id="firstname" class="smallText"></div>
+           <label >Last name<sup class="blue">*</sup></label> <br>
+           <input onclick="lName()" id="lastName" type="text" required>
+           <div id="lastname" class="smallText"></div>
+           <label >Credit or debit card number<sup class="blue">*</sup></label> <br>
+           <input onclick="cNum()" id="creditNum" type="number" required>
+           <div id="creditnum" class="smallText"></div>
+           <div class="cvvExpireBox">
+                <div class="expiry">
+                    <label >Expiration date<sup class="blue">*</label>
+                    <input onclick="expDate()" id="expiryDate" type="month" placeholder="MM/YY" max="2025-12" required>
+                    
+                    <div id="expirydate" class="smallText"></div>
+                </div>
+                <div class="cvv">
+                    <label >Security Code<sup class="blue">*</label>
+                    <input onclick="cvvNum()" id="cvvNumber" type="password" required>
+                    <div id="cvvnumber" class="smallText"></div>
+                </div>
+           </div>
+           <!-- Country -->
+           <label >Country<sup class="blue">*</sup></label> <br>
+           <select name="Country" id="country" >
+               <option value="Singapore">Singapore</option>
+                <option value="India"selected>India</option>
+                <option value="Usa">Usa</option>
+                <option value="Nepal">Nepal</option>
+                <option value="China">China</option>
+                <option value="Pakistan">Pakistan</option>
+          </select>
+          <!-- postalBox -->
+          <div class="postalBox">
+            <div class="expiry">
+                <label >Postal code<sup class="blue">*</label>
+                <input onclick="pCode()" id="postalCode" type="number" required>
+                <div id="postalcode" class="smallText"></div>
+            </div>
+            <div class="cvv">
+                <label >GST<sup class="blue">*</label>
+                <input onclick="gstNum()" placeholder="Optional" id ="gstNumber" type="password">
+                <div id="gstnumber" class="smallText"></div>
+            </div>
+       </div>
+       <input type="submit" id="submit" value="Review order">
+       </form>
+       
+   </div>
+   <!-- checkout 7th -->
+    <div class="checkout2">
+        <div id="number">3</div>
+        <div class="items">Review your order</div>
+    </div>
+    <!-- checkout 8th -->
+    <div id="checkout8">
+        <div class="reviewBullet">
+            <p><li>You will <b>only be charged once</b> for the purchase of this course.</li></p>
+            <p><li>You will <b>have access</b> to this course through your LinkedIn Learning account.</li></p>
+            <p><li>Any future updates to this course will be automatically distributed to you <b>at no additional cost.</b>
+            </li></p>
+        </div>
+        <div class="generalInform">
+            <p>By placing this order you agree to our terms of service. To ensure continued service, we'll store and update (e.g., upon expiration) your payment method. Learn about our refund policy.</p>
+        </div>
+       <div > <button id="paymentDone" class="placeOrder">Place order</button> </div>
+       <div class="lowersecure"> 
+           <a href="https://" title="Click here to proceed to secure payment"> <div><i class="material-icons newlock">lock</i></div></a>
+          
+        <a href="" title="Click here to proceed to secure payment"><div>Secure Checkout</div></a> 
+    </div>
+   </div>
+   <!-- checkout 9 -->
+   <div style="height: 100px;">
+        
+   </div>
+</body>
+</html>
+<script>
+    var items = localStorage.getItem("courseData")
+    items = JSON.parse(items);
+    
+    function show(){
+
+        items.forEach(function(product){
+            let firstBox = document.createElement("div");
+            firstBox.setAttribute("class","firstBox");
+            let divBox = document.createElement("div");
+                divBox.setAttribute("class","videoBox")
+            let vids = document.createElement("VIDEO");
+            vids.src = product.video
+            vids.setAttribute("width", "100%");
+            vids.setAttribute("height", "100%");
+            vids.setAttribute("controls", "controls");
+            vids.setAttribute("id", "videoPlayerNew");
+            divBox.appendChild(vids)
+
+            let contentBox = document.createElement("div");
+                contentBox.setAttribute("class","contentBox");
+            
+            let name = document.createElement("p");
+            name.textContent = product.name
+            name.setAttribute("class","name-s")
+            let by = document.createElement("p");
+             by.textContent = product.by
+             by.setAttribute("class","by-s")
+            let title = document.createElement("p");
+            title.textContent = product.title
+            title.setAttribute("class","title-s")
+            contentBox.append(name,by,title)
+            let price = document.createElement("p");
+            price.textContent = `र ${product.price}`;
+            let priceB = document.createElement("div");
+            priceB.appendChild(price)
+            priceB.setAttribute("class","priceB")
+
+            let totalCalc = document.createElement("div");
+                totalCalc.setAttribute("class","totalCalc")
+            totalCalc.appendChild(priceB);
+            firstBox.append(divBox,contentBox,totalCalc)
+            
+            let intro = document.createElement("div");
+                intro.setAttribute("class","intro")
+                intro.textContent="Included with your purchase:"
+
+            let bigBoss = document.createElement("div");
+            bigBoss.setAttribute("class","bigBoss")
+                let lefter= document.createElement("div");
+                lefter.setAttribute("class","lefter")
+                
+
+                let vidC = document.createElement("div");
+                vidC.textContent="Videos";
+                let cerC = document.createElement("div");
+                cerC.textContent="Certificate of completion to add to your LinkedIn profile";
+                let learnC = document.createElement("div");
+                learnC.textContent="Learn anytime, anywhere through mobile apps and offline access";
+                lefter.append(vidC,cerC,learnC);
+
+
+
+
+                let righter = document.createElement("div");
+                righter.setAttribute("class","righter")
+
+                let accessC = document.createElement("div");
+                accessC.textContent="Lifetime access*"
+
+                let guranteeC = document.createElement("div");
+                guranteeC.textContent = "30-day money-back guarantee";
+
+                let covidC = document.createElement("div");
+                covidC.textContent="Challange Based Learnning even in Covid-19"
+
+                righter.append(accessC,guranteeC,covidC)
+
+
+            bigBoss.append(lefter,righter)
+            let showcaseDiv = document.createElement("div");
+             showcaseDiv.setAttribute("class","showCase")
+                showcaseDiv.append(intro,bigBoss)
+
+                let genuine = document.createElement("div");
+                    genuine.setAttribute("class","genuine")
+                genuine.textContent ="*Courses will generally remain available for as long as you keep your LinkedIn account, unless otherwise specified during checkout. On rare occasions we may need to remove certain courses for legal or other reasons.";
+
+            document.getElementById("checkout3").append(firstBox,showcaseDiv,genuine);
+            let store = Math.floor((18 / 100) * product.price);
+            console.log(store) ;
+            let realPrice = store + product.price;
+            let showTotals = document.getElementById("totalsDone")
+                showTotals.textContent =`र ${store}`;
+            let showTotalss = document.getElementById("totalsDoneS")
+            showTotalss.textContent =`र ${realPrice}`
+        })
+    }
+    show()
+
+
+    function fName(){
+        let fname = document.getElementById("firstName").value;
+        fname= fname.trim();
+        if(fname == ""){
+            document.getElementById("firstname").textContent ="First name Required"
+            document.getElementById("firstname").style.color="red"
+        }
+    }
+    function lName(){
+        let lname = document.getElementById("lastName").value;
+        lname= lname.trim();
+        if(lname == ""){
+            document.getElementById("lastname").textContent ="Last name Required"
+            document.getElementById("lastname").style.color="red"
+        }
+    }
+
+    function cNum(){
+        let cnum = document.getElementById("creditNum").value;
+        cnum= cnum.trim();
+        if(cnum == "" || cnum.length < 16){
+            document.getElementById("creditnum").textContent ="Please enter a valid card number"
+            document.getElementById("creditnum").style.color="red"
+        }
+
+        if(cnum != "" && cnum.length < 16){
+            document.getElementById("creditnum").innerHTML=null;
+            document.getElementById("creditnum").textContent ="Credit card should be of 16 numbers"
+            document.getElementById("creditnum").style.color="red"
+        }
+       
+        
+    }
+
+    function expDate(){
+        let expdate = document.getElementById("expiryDate").value;
+         expdate = expdate.trim();
+         if(expdate == ""){
+             document.getElementById("expirydate").textContent ="Invalid expiration date";
+             document.getElementById("expirydate").style.color="red";
+         }
+    }
+    function cvvNum(){
+        let cvvnum = document.getElementById("cvvNumber").value;
+         cvvnum = cvvnum.trim();
+         if(cvvnum == ""){
+             document.getElementById("cvvnumber").textContent ="Invalid Cvv password";
+             document.getElementById("cvvnumber").style.color="red";
+         }
+         else if(cvvnum != "" && cvvnum.length !=3){
+             document.getElementById("cvvnumber").textContent ="Cvv should be only of 3 numbers";
+             document.getElementById("cvvnumber").style.color="red";
+         }
+    }
+    function pCode(){
+        let pcode = document.getElementById("postalCode").value;
+         pcode = pcode.trim();
+         if(pcode == ""){
+             document.getElementById("postalcode").textContent ="Please enter a valid postal code";
+             document.getElementById("postalcode").style.color="red";
+         }
+         else if(pcode != "" && pcode.length !=6){
+             document.getElementById("postalcode").textContent ="Postal code should be of 6 numbers";
+             document.getElementById("postalcode").style.color="red";
+         }
+    }
+
+    function gstNum(){
+        let gstnum = document.getElementById("gstNumber").value;
+         gstnum = gstnum.trim();
+         if(gstnum == ""){
+             document.getElementById("gstnumber").textContent ="Please enter a valid gst number";
+             document.getElementById("gstnumber").style.color="red";
+         }
+         else if(gstnum != "" && gstnum.length !=15){
+             document.getElementById("gstnumber").textContent ="GST number should be of 15 characters";
+             document.getElementById("gstnumber").style.color="red";
+         }
+        
+    }
+
+    function remove() {
+        let fname = document.getElementById("firstName").value
+        fname= fname.trim();
+        if(fname != ""){
+           document.getElementById("firstname").innerHTML =null;
+        }
+        let lname = document.getElementById("lastName").value;
+        lname= lname.trim();
+        if(lname != ""){
+            document.getElementById("lastname").innerHTML =null;
+        }
+
+        let cnum = document.getElementById("creditNum").value;
+        cnum= cnum.trim();
+        if(cnum.length == 16){
+            document.getElementById("creditnum").innerHTML =null;
+        }
+        let expdate = document.getElementById("expiryDate").value;
+         expdate = expdate.trim();
+         if(expdate != ""){
+             document.getElementById("expirydate").innerHTML =null;
+         }
+         let cvvnum = document.getElementById("cvvNumber").value;
+         cvvnum = cvvnum.trim();
+         if(cvvnum != "" && cvvnum.length ==3){
+             document.getElementById("cvvnumber").innerHTML =null;
+         }
+
+         let pcode = document.getElementById("postalCode").value;
+         pcode = pcode.trim();
+         if(pcode != "" && pcode.length ==6){
+             document.getElementById("postalcode").innerHTML = null;
+         }
+
+         let gstnum = document.getElementById("gstNumber").value;
+         gstnum = gstnum.trim();
+         if(gstnum != "" &&gs){
+             document.getElementById("gstnumber").innerHTML =null;
+         }
+        
+    }
+    
+    
+    function submitForm(e){
+            e.preventDefault();
+            console.log(e);
+            var paymentDetails =[];
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var creditNumber = document.getElementById('creditNum').value;
+            var expiryDate = document.getElementById('expiryDate').value;
+            var cvvNumber = document.getElementById('cvvNumber').value;
+            var country = document.getElementById('country').value;
+            var postalCode = document.getElementById('postalCode').value;
+            var gstNumber = document.getElementById("gstNumber").value;
+           let obj={
+               FirstName:firstName,
+               LastName:lastName,
+               creditDebitDetail:creditNumber,
+               ExpiryDate:expiryDate,
+               CVV:cvvNumber,
+               Country:country,
+               PostalCode:postalCode,
+               GSTdetails:gstNumber,
+           }
+            paymentDetails.push(obj);
+           localStorage.setItem('myCustomerDetails',JSON.stringify(paymentDetails));
+           function alertCustomer(){
+            alert("You can place order now")
+           }
+           setTimeout(alertCustomer,1000)
+        }
+
+        let newPayment = document.getElementById("paymentDone");;
+         newPayment.addEventListener("click", paymentDone);
+
+        function paymentDone(){
+
+            function setTimer(){
+                alert("Payment Successfull!");
+                window.location.href ="home.html"
+            }
+            setTimeout(setTimer,3000)
+        }
+
+    
+</script>
