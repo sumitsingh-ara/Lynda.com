@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your In Progress Content</title>
+    <title>Your Saved Content</title>
     <style>
         body {
             margin: 0px;
@@ -14,7 +14,6 @@
         .hover {
             cursor: pointer;
         }
-        
         #header-su {
             background-color: #ffffff;
             width: 100%;
@@ -58,7 +57,7 @@
             background-color:#ffffff;
         }
         .header-buttons-su{
-            width:39%;
+            width:35%;
             height:45px;
             margin-left:10%;
             overflow: hidden;
@@ -260,8 +259,8 @@
             max-width: 100%;
             height: 400px;
             background-color: #ffff;
-            overflow-y: scroll;
-            overflow-x: hidden;
+            overflow-y:scroll;
+            /* overflow-x: hidden; */
         }
 
         .appender {
@@ -459,9 +458,6 @@
         .left-sus {
             margin-left: 2%;
         }
-        #trial:hover{
-            cursor: pointer;
-        }
     </style>
 </head>
 
@@ -503,9 +499,9 @@
                     <div id ="navBox">
                         <div id = "navigation">
                             <a onclick="startTimer()"id="trial">Start my free month</a>
-                            <a href="" >Signout</a>
-                            <a href="myLearning.html" id="login">My Learning</a>
-                            <a  href ="home.html" id="home">Home</a>
+                            <a href="" >Me</a>
+                            <a href="project.html" id="login">My Learning</a>
+                            <a  href ="" id="home">Home</a>
                         </div>
                     </div>
                 </div>
@@ -536,8 +532,8 @@
             <h2>My Learning</h2>
         </div>
         <div class="options-su">
-            <div onclick="location.href='myLearning.html'" id="onProgresssu" class="right-margin-su" tabindex="1">In Progress(3)</div>
-            <div onclick="showProductsSaved()"id="savedShow" class="right-margin-su" tabindex="2">Saved</div>
+            <div onclick="location.href='project.html'" class="right-margin-su" tabindex="1">In Progress</div>
+            <div onclick="location.href='saved.html'" class="right-margin-su" tabindex="2">Saved</div>
             <div class="right-margin-su" tabindex="3">My collections</div>
             <div class="right-margin-su" tabindex="4">Learning History</div>
             <div class="right-margin-su" tabindex="5">Skills</div>
@@ -580,7 +576,16 @@
 </html>
 <script>
     let products = [
-    {
+        {
+            title: "JAVA SCRIPT",
+            name: "Learning the Java Script Promises",
+            by: "By: Swanand",
+            date: "19th August 2021",
+            video: "C:/Users/Sumit/Desktop/VideosLocal/Promises.mp4",
+            link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+            time: 30,
+        },
+        {
             title: "GIT",
             name: "Learning Git Branching",
             by: "By: Nrupul Dev",
@@ -591,7 +596,25 @@
         },
         {
             title: "JAVA SCRIPT",
-            name: "Project on DOM E-Cart",
+            name: "Learning How JS Works",
+            by: "By: Swanand",
+            date: "16th August 2021",
+            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_4.mp4",
+            link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+            time: 124,
+        },
+        {
+            title: "JAVA SCRIPT",
+            name: "Learning the Concepts of DOM",
+            by: "By: Swanand",
+            date: "17th August 2021",
+            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_2.mp4",
+            link: "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
+            time: 91,
+        },
+        {
+            title: "JAVA SCRIPT",
+            name: "Project on DOM E-cart",
             by: "By: Swanand",
             date: "21st August 2021",
             video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0.mp4",
@@ -608,16 +631,12 @@
             time: 3,
         },
     ]
-    
     localStorage.setItem("myCourse", JSON.stringify(products))
 
     var myCourses = localStorage.getItem("myCourse")
     myCourses = JSON.parse(myCourses);
-        
+
     function showProducts() {
-        console.log(myCourses.length)
-        let showProgress = document.getElementById("onProgresssu")
-        showProgress.textContent = "In Progress-"+(myCourses.length);
 
         myCourses.forEach(function (product) {
             let appender = document.createElement("div");
@@ -716,20 +735,19 @@
     showProducts()
 
     function topLists(){
-        window.location.href = "businessContent.html";
+        window.location.href = 'https://jaxpubliclibrary.org/blog/top-10-online-courses-take-lyndacom';
     }
 
     function linkedinHome(){
-        window.location.href ="home.html";
+        window.location.href ="stiwari.html";
     }
 
         var count =0;
 
         function startTimer(){
 
-            var timeleft = 3;
+            var timeleft = 5;
             var hoursLeft = 2592000;
-            
             if(count == 0){
                 if(count ==0){
                 var downloadTimer = setInterval(function set() {
@@ -775,7 +793,7 @@
                     if(store < 10){
                         store = "0"+store
                     }
-                document.getElementById("trial").innerHTML ="Trial left "+ hr+" : "+mins+": "+store ;
+                document.getElementById("trial").innerHTML = hr+" : "+mins+": "+store ;
                 }
                 hoursLeft -= 1;
                 }, 1000);
@@ -786,183 +804,6 @@
             }
         }
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //Saved Section Showing Data
-        let productsSaved = [
-        {
-            title: "JAVA SCRIPT",
-            name: "Learning the Java Script Promises",
-            by: "By: Swanand",
-            date: "19th August 2021",
-            video: "C:/Users/Sumit/Desktop/VideosLocal/Promises.mp4",
-            link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
-            time: 30,
-        },
-        {
-            title: "GIT",
-            name: "Learning Git Branching",
-            by: "By: Nrupul Dev",
-            date: "24th August 2021",
-            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_3.mp4",
-            link: "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/GitHub",
-            time: 29,
-        },
-        {
-            title: "JAVA SCRIPT",
-            name: "Learning How JS Works",
-            by: "By: Swanand",
-            date: "16th August 2021",
-            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_4.mp4",
-            link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-            time: 124,
-        },
-        {
-            title: "JAVA SCRIPT",
-            name: "Learning the Concepts of DOM",
-            by: "By: Swanand",
-            date: "17th August 2021",
-            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0_2.mp4",
-            link: "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
-            time: 91,
-        },
-        {
-            title: "JAVA SCRIPT",
-            name: "Project on DOM E-cart",
-            by: "By: Swanand",
-            date: "21st August 2021",
-            video: "C:/Users/Sumit/Desktop/VideosLocal/Zoom_0.mp4",
-            link: "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
-            time: 93,
-        },
-        {
-            title: "JAVA SCRIPT",
-            name: "Project on DOM Movie-Website",
-            by: "By: Sumit Web_11_237",
-            date: "19th August 2021",
-            video: "C:/Users/Sumit/Desktop/VideosLocal/Untitled.mp4",
-            link: "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events",
-            time: 3,
-        },
-    ]
-    localStorage.setItem("myCourseSaved", JSON.stringify(productsSaved))
-
-    var myCoursesSaved = localStorage.getItem("myCourseSaved")
-    myCoursesSaved = JSON.parse(myCoursesSaved);
-
-    function showProductsSaved() {
-        let newAppend = document.getElementById("video-box-su")
-                newAppend.innerHTML = null;
-                let showProgress = document.getElementById("savedShow")
-        showProgress.textContent = "Saved-"+(myCoursesSaved.length);
-        myCoursesSaved.forEach(function (product) {
-            let appender = document.createElement("div");
-            appender.setAttribute("class", "appender");
-
-
-            let videoDiv = document.createElement("div");
-            videoDiv.setAttribute("class", "video-play-su")
-            let vids = document.createElement("VIDEO");
-            vids.src = product.video
-            vids.setAttribute("width", "100%");
-            vids.setAttribute("height", "150");
-            vids.setAttribute("controls", "controls");
-            vids.setAttribute("id", "videoPlayerNew");
-            videoDiv.appendChild(vids)
-            //progress bar
-
-            let bigDuration = document.createElement("div")
-            bigDuration.setAttribute("class", "flex-su")
-
-            let share = document.createElement("button");
-            share.textContent = "Share"
-            share.setAttribute("class", "sharebtn-su")
-
-            let durations = document.createElement("div");
-            let durations2 = document.createElement("div");
-            durations2.setAttribute("class", "flex-hour-su")
-            durations.setAttribute("class", "durationBox-su")
-            let progress = document.createElement("PROGRESS")
-            function random(number) {
-                return Math.floor(Math.random() * number)
-            }
-            var generator = random(product.time)
-            progress.setAttribute("value", generator);
-
-            var a = generator;
-            var b = product.time - generator;
-            var count = 0;
-            while (b >= 60) {
-                b = b - 60;
-                count++
-            }
-            var hours = document.createElement("p");
-            hours.innerHTML = count;
-            var minute = document.createElement("p")
-            minute.textContent = b;
-            console.log("Count", count)
-            console.log(b)
-
-
-            progress.setAttribute("max", product.time);
-            durations.append(progress)
-            durations2.append(hours, "-hours &-", minute, "-minutes left")
-            bigDuration.append(durations, durations2, share)
-            //console.log(random(product.time/2))
-            //console.log(document.getElementById("videoPlayerNew").duration)
-
-
-            //vidcontent
-            let videoContent = document.createElement("div");
-            videoContent.setAttribute("id", "vid-content-su");
-
-
-            let title = document.createElement("p");
-            title.textContent = product.title;
-            title.setAttribute("class", "title-su")
-
-            let name = document.createElement("a");
-            let link = document.createTextNode(product.name)
-            name.appendChild(link)
-
-            name.href = product.link;
-            name.setAttribute("class", "name-su")
-
-
-            let dateDiv = document.createElement("div");
-            dateDiv.setAttribute("class", "dateBox-su")
-            let by = document.createElement("p");
-            by.textContent = product.by;
-
-            let date = document.createElement("p");
-            date.setAttribute("class", "left-sus")
-            date.textContent = product.date;
-
-            dateDiv.append(by, date);
-            videoContent.append(title, name, dateDiv, bigDuration)
-
-            appender.append(videoDiv, videoContent)
-
-
-
-            document.getElementById('video-box-su').appendChild(appender);
-        })
-
-    }
-    
         
     
 
