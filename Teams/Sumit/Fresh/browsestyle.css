@@ -8,6 +8,16 @@ body {
 .hover {
     cursor: pointer;
 }
+#option a{
+    text-decoration: none;
+    color:#808280;
+}
+#option a:hover{
+    color: black;
+}
+#option a:focus{
+    color: #006097;
+}
 
 #header-su {
     background-color: #ffffff;
