@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      main {
+        width: 100%;
+        height: 350px;
+        margin: 200px auto;
+        position: relative;
+        overflow: hidden;
+      }
+
+      h1 {
+        width: 90%;
+        margin: 10px auto;
+        background-color: rgb(160, 98, 16);
+      }
+      span {
+        position: absolute;
+        top: 40%;
+        font-size: 60px;
+        font-weight: bold;
+        color: rgb(7, 41, 29);
+        cursor: pointer;
+        left: 0.5px;
+        z-index: 1;
+        margin-left: 60px;
+      }
+      span:nth-of-type(2) {
+        left: 90%;
+        text-align: right;
+      }
+      section {
+        width: 85%;
+        height: 400px;
+        background-color: blueviolet;
+        margin: 10px auto;
+        display: flex;
+        justify-content: left;
+        overflow-x: auto;
+        z-index: -1;
+      }
+      section::-webkit-scrollbar {
+        visibility: hidden;
+      }
+      .cont {
+        min-width: 200px;
+        height: 150px;
+        position: relative;
+        left: 0;
+        text-align: center;
+        padding-top: 60px;
+        background-image: url("https://tse1.mm.bing.net/th?id=OIP.-JRkzhu12Q1QdyTcKtWWhAHaEK&pid=Api&rs=1&c=1&qlt=95&w=211&h=118");
+        margin: 10px 20px;
+        display: flex;
+        transition: 1s;
+        z-index: 1;
+        background-repeat: no-repeat;
+      }
+      .cont:hover {
+        transform: scale(1.3);
+        height: 380px;
+        width: 300px;
+        align-items: center;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>heading</h1>
+      <span>&#139;</span>
+      <span>&#155;</span>
+      <section>
+        <div class="cont">
+          <div class="vid">sdfg</div>
+        </div>
+        <div class="cont">2</div>
+        <div class="cont">3</div>
+        <div class="cont">4</div>
+        <div class="cont">5</div>
+        <div class="cont">6</div>
+        <div class="cont">7</div>
+        <div class="cont">8</div>
+        <div class="cont">9</div>
+        <div class="cont">10</div>
+        <div class="cont">11</div>
+        <div class="cont">12</div>
+      </section>
+    </main>
+    <script>
+      var span = document.getElementsByTagName("span");
+      var div = document.getElementsByTagName("div");
+      var l = 0;
+      span[1].onclick = () => {
+        l++;
+        for (var i of div) {
+          if (l == 0) {
+            i.style.left = "0px";
+          }
+          if (l == 1) {
+            i.style.left = "-740px";
+          }
+          if (l == 2) {
+            i.style.left = "-1480px";
+          }
+          if (l == 3) {
+            i.style.left = "-2220px";
+          }
+          //   if (l == 4) {
+          //     i.style.left = "-2960px";
+          //   }
+          //   if (l > 4) {
+          //     l = 4;
+          //   }
+        }
+      };
+      span[0].onclick = () => {
+        l--;
+        for (var i of div) {
+          if (l == 0) {
+            i.style.left = "0px";
+          }
+          if (l == 1) {
+            i.style.left = "-740px";
+          }
+          if (l == 2) {
+            i.style.left = "-1480px";
+          }
+          if (l == 3) {
+            i.style.left = "-2220px";
+          }
+          //   if (l == 4) {
+          //     i.style.left = "-2960px";
+          //   }
+          //   if (l > 4) {
+          //     l = 4;
+          //   }
+        }
+      };
+    </script>
+  </body>
+</html>
