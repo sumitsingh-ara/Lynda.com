@@ -60,17 +60,6 @@
         align-items: center;
         background-color: rgb(250, 249, 249);
       }
-      .sh-logo {
-        padding-left: 3px;
-        width: 30%;
-        height: 50px;
-        margin-top: 30px;
-
-        margin-left: 100px;
-
-        display: flex;
-        justify-content: left;
-      }
 
       .sh-second-nav {
         width: 40%;
@@ -140,26 +129,70 @@
       .sh-hover-me {
         font-size: 90%;
       }
+      .sh-logo {
+        padding-left: 3px;
+        width: 30%;
+        height: 50px;
+        margin-top: 30px;
+
+        margin-left: 100px;
+
+        display: flex;
+        justify-content: left;
+      }
       .linked {
-        font-size: 19px;
+        font-size: 20px;
         color: rgb(44, 123, 202);
-        font-weight: bold;
-        margin-left: 20px;
-        margin-right: 5px;
+        font-weight: 600;
+        margin-left: 3px;
+        margin-right: 2px;
+        color: rgb(17, 98, 179);
+        font-style: helvetica;
+
+        height: 20px;
       }
       .in {
-        height: 18px;
-        width: 18px;
-        background-color: rgb(44, 123, 202);
-        font-size: 17px;
+        height: 22px;
+        width: 21px;
+        background-color: rgb(17, 98, 179);
+        font-size: 18px;
         color: white;
-        margin-right: 5px;
+        margin-right: 6px;
         font-weight: bold;
         text-align: center;
+        border-radius: 2px;
+        font-style: helvetica;
+        padding-top: 1px;
       }
       .lerning {
-        font-size: 19px;
-        color: rgb(209, 209, 209);
+        font-size: 16px;
+        color: #0000008c;
+        font-weight: 400;
+        font-style: helvetica;
+
+        height: 20px;
+        margin-top: 3px;
+      }
+      .hover-logo {
+        width: 39%;
+        height: 29px;
+        display: flex;
+        margin-left: 20px;
+        position: relative;
+      }
+      .hover-logo:after {
+        content: "";
+        position: absolute;
+
+        height: 3px;
+        width: 100%;
+        left: 0;
+        bottom: -1px;
+      }
+      .hover-logo:hover:after {
+        width: 100%;
+        background-color: rgb(17, 98, 179);
+        border-radius: 2px;
       }
       .light-div {
         width: 100%;
@@ -341,10 +374,12 @@
           <div><a href="#" class="sh-hover-me">Get support</a></div>
         </div>
         <nav>
-          <div class="sh-logo">
-            <div class="linked">Linked</div>
-            <div class="in">in</div>
-            <div class="lerning">Learning</div>
+          <div class="sh-logo" onclick="home()">
+            <div class="hover-logo">
+              <div class="linked">Linked</div>
+              <div class="in">in</div>
+              <div class="lerning">Learning</div>
+            </div>
           </div>
           <div class="sh-second-nav">
             <a href="#" class="sh-hover">Product</a>
@@ -409,6 +444,10 @@
       //   console.log("click");
       // };
       // header();
+
+      function home() {
+        window.location.href = "home.html";
+      }
     </script>
   </body>
 </html>
