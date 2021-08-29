@@ -1,0 +1,708 @@
+body {
+  margin: 0px;
+  font-family: "oxygen", "sans-serif";
+}
+.hover {
+  cursor: pointer;
+}
+/*=============<<<<<<<<<header-start>>>>>>>>>>>========================================*/
+#header-su {
+  background-color: #ffffff;
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  padding-top: 0.35%;
+  margin-bottom: 50px;
+  z-index: 999;
+}
+.search-Bar-su {
+  margin-top: 4px;
+  width: 26%;
+  margin-left: 3%;
+  height: 30px;
+  display: flex;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+.search-input-su {
+  width: 100%;
+}
+.search-Bar-su input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 15px;
+  background-color: #eceff1;
+  padding-left: 5px;
+}
+.search-Bar-su input:focus {
+  background-color: #ffffff;
+}
+.search-Bar-su .fa-search {
+  position: absolute;
+  right: 8px;
+  top: 7px;
+}
+.search-mobile {
+  display: none !important;
+}
+/*=======================================<<<<Search styes ends>>>>=====================*/
+/* 1st added */
+.header-buttons-su {
+  width: 40%;
+  height: 40px;
+  margin-left: 10%;
+  display: flex;
+  font-size: 15px;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-buttons-su a {
+  text-decoration: none;
+  color: black;
+}
+.learning-head {
+  height: 40px;
+  padding-left: 25px;
+  padding-right: 15px;
+}
+/* adjusted */
+.adjust {
+  padding-left: 10px;
+  font-size: 20px;
+}
+.adjust:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+.adjust2 {
+  font-size: 20px;
+  padding-left: 25px;
+}
+.adjust3 {
+  font-size: 20px;
+}
+/* adjusted */
+.timer-head-su {
+  width: 40%;
+  padding-left: 10%;
+  padding: 16px 20px;
+}
+/* dropper Starts*/
+.dropbtn {
+  width: 0%;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(0, 41, 94);
+  color: white;
+}
+
+.show {
+  display: block;
+}
+/* dropper ends */
+.first-bar {
+  width: 80%;
+  margin: 0 auto;
+  height: 50px;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.second-bar {
+  width: 100%;
+  height: 40px;
+  background-color: #f3f6f8;
+}
+.right-side-su {
+  width: 52%;
+  height: 100%;
+  border: 1px solid #f3f6f8;
+}
+.bar-container {
+  width: 90%;
+  margin: auto;
+  height: 50%;
+  margin-top: 5px;
+  display: flex;
+  font-size: 14px;
+}
+.bar-container a {
+  text-decoration: none;
+  color: gray;
+  margin-left: 3%;
+}
+.linkedin-logo-su {
+  background-color: #1976d2;
+  color: white;
+  width: 30px;
+  margin-top: 5px;
+  max-height: 30px;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+/*=======================================Browse styes=====================*/
+.browse-su,
+.search-mobile {
+  width: 5%;
+  margin-left: 2%;
+  color: #74716d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+.browse-su .fa,
+.search-mobile .fa {
+  font-size: 20px;
+}
+.browse-su:hover,
+.search-mobile:hover {
+  color: black;
+  cursor: pointer;
+}
+/*=======================================<<<<Browse styes ends>>>>=====================*/
+
+/*=============================<<<<<<<header-end>>>>>>>>>>>>>===========================*/
+/* Body part starting */
+
+/* Body Ended,footer starts */
+.content-su h3 {
+  margin: 0px;
+  margin-top: 3px;
+}
+
+.content-su {
+  margin: 0px;
+  margin-left: 2%;
+  display: flex;
+}
+
+.content-su h2 {
+  margin: 0px;
+  margin-top: 0px;
+}
+
+#trial {
+  width: 46%;
+}
+
+.bar-container div {
+  margin-left: 3%;
+}
+.bar-container a:hover {
+  color: black;
+  text-decoration: underline;
+}
+hr {
+  margin: 0px;
+}
+
+.inside-header-su {
+  height: 80%;
+  display: flex;
+}
+.size-su {
+  font-size: 14px;
+}
+
+/* Body part starting */
+.content-su h3 {
+  margin: 0px;
+  margin-top: 3px;
+}
+
+.content-su {
+  margin: 0px;
+  margin-left: 2%;
+  display: flex;
+}
+
+.content-su h2 {
+  margin: 0px;
+  margin-top: 0px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+.learning-su {
+  vertical-align: middle;
+  font-size: 16px;
+  padding-top: 13px;
+  margin-left: 5px;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
+}
+
+.my-learning-section {
+  width: 100%;
+  background-color: white;
+  margin-top: 94px;
+  height: 125px;
+}
+
+.my-learn-su {
+  margin-top: 0px;
+  width: 40%;
+  border: 1px solid white;
+  margin-left: 13%;
+}
+
+.my-learn-su h2 {
+  margin-bottom: 0px;
+}
+
+.options-su {
+  margin-top: 45px;
+  width: 40%;
+  height: 30px;
+  margin-left: 13%;
+  display: flex;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.right-margin-su {
+  margin-right: 7%;
+}
+.options-su div:focus {
+  color: blue;
+}
+
+.options-su div {
+  color: #74716d;
+}
+
+.options-su div:hover {
+  color: black;
+  cursor: pointer;
+}
+#video-box-su {
+  max-width: 100%;
+  height: 400px;
+  background-color: #ffff;
+  overflow-y: scroll;
+  /* overflow-x: hidden; */
+}
+
+.appender {
+  width: 100%;
+  height: 180px;
+  display: flex;
+}
+
+.video-play-su {
+  margin: 15px 13%;
+  margin-right: 1%;
+  width: 20%;
+  height: 150px;
+}
+
+#vid-content-su {
+  margin: 15px 0px;
+  width: 60%;
+  height: 150px;
+}
+
+.title-su {
+  font-size: 12px;
+  font-weight: 100;
+  color: #a2a2a2;
+}
+
+.name-su {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.name-su:hover {
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.dateBox-su {
+  display: flex;
+}
+
+.flex-su {
+  width: 100%;
+  display: flex;
+}
+
+.sharebtn-su {
+  margin-left: 25%;
+  width: 8%;
+  height: 30px;
+  border: 1px solid #1976d2;
+  background-color: white;
+  color: #1976d2;
+  font-weight: bold;
+}
+.sharebtn-su:hover {
+  border: 2px solid #1976d2;
+  background-color: #81d4fa;
+}
+progress {
+  margin-top: 9px;
+  min-width: 20%;
+}
+
+.flex-hour-su {
+  display: flex;
+  width: 40%;
+  margin-top: 0%;
+  margin-left: 2%;
+  align-items: center;
+  text-align: center;
+}
+
+.flex-hour-su p {
+  margin: 0px;
+}
+/* Body Ended,footer starts */
+
+#footer-su {
+  width: 100%;
+  height: 150px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.footer-first-su {
+  width: 65%;
+  height: 50px;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.footer-second-su {
+  width: 20%;
+  height: 50px;
+  margin: 0px auto;
+}
+
+.footer-content-su {
+  width: 100%;
+  height: 20px;
+  margin: auto;
+  display: flex;
+  flex-grow: 1;
+  color: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+.footer-content-su div {
+  margin: auto;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.footer-content-su div:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.blue-su:hover {
+  color: blue;
+}
+
+.arrow-su {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.arrow-su-fill {
+  width: 0;
+  margin-left: 5px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid rgb(0, 0, 0);
+}
+
+.up-su {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down-su {
+  transform: rotate(-310deg);
+  -webkit-transform: rotate(-310deg);
+}
+
+.down-sus {
+  transform: rotate(-360deg);
+  -webkit-transform: rotate(-360deg);
+}
+
+.flex-sus {
+  display: flex;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+.footer-second-su h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+.linkedin-logo-sus {
+  background-color: #1976d2;
+  color: white;
+  width: 20px;
+  margin-top: 18px;
+  max-height: 20px;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.simpler-su {
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.left-su {
+  margin: auto;
+}
+
+.left-sus {
+  margin-left: 2%;
+}
+.learning-su {
+  vertical-align: middle;
+  font-size: 16px;
+  padding-top: 13px;
+  margin-left: 5px;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
+}
+/*=================================<<<<<<<<responsive>>>>>>>==============================================================*/
+/*=======================================ipad styes starts=====================*/
+
+/*==============stcky header=======================*/
+@media screen and (min-width: 500px) and (max-width: 992px) {
+  .second-bar {
+    display: none;
+  }
+  .first-bar {
+    width: 90%;
+    height: 50px;
+    padding-top: 10px;
+  }
+  .dropdown-content {
+    right: 0;
+  }
+  .browse-su,
+  .search-mobile {
+    margin-left: 5%;
+  }
+  #navigation #home,
+  #navigation .timer-head-su,
+  .header-buttons-su > a,
+  .timer-head-su {
+    display: none;
+  }
+  .header-buttons-su {
+    width: 29%;
+    height: 50px;
+    margin-left: 36%;
+    overflow: hidden;
+  }
+  .search-mobile {
+    display: flex;
+    align-items: center;
+  }
+  .search-Bar-su {
+    display: none;
+  }
+  .suggest-su {
+    margin-top: 53px;
+  }
+  .search-mobile {
+    width: 5%;
+    margin-left: 5%;
+    color: #74716d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+  }
+  /*==============stcky header ends=======================*/
+
+  /*==============body content starts=======================*/
+  .options-su {
+    width: 80%;
+  }
+  .sharebtn-su {
+    margin-left: 6%;
+    width: 12%;
+  }
+  .flex-hour-su {
+    width: 48%;
+  }
+  /*==============body content ends=======================*/
+}
+/*=======================================<<<<ipad styes ends>>>>=====================*/
+
+/*=======================================<<<<phone styes ends>>>>=====================*/
+
+/*==============stcky header=======================*/
+@media screen and (max-width: 500px) {
+  #navigation #home,
+  #navigation .timer-head-su,
+  .header-buttons-su > a,
+  .timer-head-su,
+  .learning-su,
+  .search-Bar-su,
+  .size-su,
+  .learning-head > a div,
+  .second-bar {
+    display: none;
+  }
+  .inside-header-su {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    justify-content: space-around;
+  }
+  .dropdown-content {
+    right: 0;
+  }
+  .header-buttons-su {
+    height: 50px;
+    overflow: hidden;
+  }
+  #navigation ul {
+    padding-top: 13px;
+  }
+  .browse-su,
+  .search-mobile {
+    margin-left: 5%;
+    justify-content: center;
+  }
+  .search-mobile {
+    width: 5%;
+    margin-left: 2%;
+    color: #74716d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+  }
+  .first-bar {
+    width: 90%;
+    height: 50px;
+  }
+  .suggest-su {
+    margin-top: 53px;
+    background-color: transparent;
+  }
+  .learning-head .fa {
+    padding-top: 10px;
+  }
+  /*==============stcky header=======================*/
+
+  /*==============body content starts=======================*/
+  .title-su {
+    font-size: 8px;
+    margin: 2px 0;
+  }
+  .name-su {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .dateBox-su p {
+    margin: 4px 0;
+  }
+  .flex-su {
+    flex-direction: column;
+  }
+  .flex-hour-su,
+  .dateBox-su {
+    width: 100%;
+    font-size: 13px;
+  }
+  .sharebtn-su {
+    width: 24%;
+    margin-left: 3%;
+  }
+  .options-su {
+    width: 90%;
+    margin-left: 5%;
+    font-size: 12px;
+  }
+  .right-margin-su {
+    margin-right: 7px;
+  }
+  /*==============body content ends=======================*/
+}
+/*=======================================<<<<phone styes ends>>>>=====================*/
+
+/*=======================================ipad-pro styes starts=====================*/
+/*==============stcky header=======================*/
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  .search-Bar-su {
+    width: 34%;
+    margin-left: 1%;
+  }
+  .learning-head {
+    padding-left: 8px;
+  }
+  .header-buttons-su {
+    width: 46%;
+    margin-left: 1%;
+  }
+  .right-side-su {
+    width: 68%;
+  }
+  .timer-head-su {
+    padding: 0px 0px;
+  }
+  /*==============stcky header=======================*/
+
+  /*==============body content starts=======================*/
+  .options-su {
+    width: 80%;
+  }
+  /*==============body content ends=======================*/
+}
+/*=======================================<<<<ipad-pro styes ends>>>>=====================*/
+/*=================================<<<<<<<<responsive ends>>>>>>>=======================================================*/
