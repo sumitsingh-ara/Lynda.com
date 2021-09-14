@@ -1,0 +1,74 @@
+#containerPOP2 {
+    width: 80%;
+    height: 350px;
+    margin: auto;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    position: relative;
+    z-index: 0;
+
+}
+
+#containerPOP2::-webkit-scrollbar {
+    visibility: hidden;
+}
+
+#parent2 {
+    margin: 0px 10px;
+    min-width: 21%;
+    max-height: 170px;
+    position: relative;
+    z-index: 10;
+    /* transition: 2s; */
+
+}
+
+VIDEO {
+    width: 98%;
+}
+
+#parent2>div {
+    height: 32px;
+    overflow: hidden;
+
+}
+
+.videoBoxes2 {
+    max-width: 100%;
+    min-height: 155px;
+}
+
+#parent2 p {
+    margin: 5px;
+    padding: 5px;
+}
+
+.top-picks-heading2 {
+    width: 78%;
+    margin: 10px auto;
+    font-size: 25px;
+
+    display: grid;
+    grid-template-columns: 91% 4% 4%;
+    text-align: left;
+    margin-top: 50px;
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+
+
+
+.marg-lef-pop2 {
+    margin-bottom: 10px;
+}
+
+.btn-Slider2 {
+    width: 40px;
+    padding: 6px 12px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    float: right;
+}
