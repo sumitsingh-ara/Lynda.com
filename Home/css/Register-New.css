@@ -13,7 +13,7 @@ body {
 .logo-container {
   text-align: center;
 }
-.logo-container img:hover{
+.logo-container img:hover {
   cursor: pointer;
 }
 .header-logo {
@@ -34,21 +34,21 @@ h1.h1-title {
   display: flex;
   justify-content: center;
   padding-bottom: 24px;
-  height:450px;
+  height: 450px;
 }
-.fnameLname{
+.fnameLname {
   display: flex;
 }
-.fnameLname{
+.fnameLname {
   display: flex;
 }
-.fnameLname div:nth-child(1){
-  width:45%;
-  margin-right:5%;
+.fnameLname div:nth-child(1) {
+  width: 45%;
+  margin-right: 5%;
 }
-.fnameLname div:nth-child(2){
-  width:45%;
-  margin-left:5%;
+.fnameLname div:nth-child(2) {
+  width: 45%;
+  margin-left: 5%;
 }
 .form-wrap {
   width: 352px;
@@ -95,12 +95,11 @@ input {
   color: rgba(0, 0, 0, 0.6);
   display: block;
   text-align: center;
-  margin:16px 0;
+  margin: 16px 0;
 }
-#signedup{
-  font-size:14px;
-  height:20px;
-  text-align: center;
+#signedup {
+  font-size: 14px;
+  height: 20px;
 }
 .sign-In {
   background-color: #0073b1;
@@ -124,7 +123,7 @@ input {
   vertical-align: middle;
   z-index: 0;
   width: 100%;
-  margin-top:30px;
+  margin-top: 30px;
 }
 #forgot {
   color: #0a66c2;
@@ -167,6 +166,7 @@ footer {
   justify-content: space-around;
   width: 85%;
   padding: 10px;
+  flex-wrap: wrap;
 }
 .footBar div:hover {
   cursor: pointer;

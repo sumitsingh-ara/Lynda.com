@@ -7,7 +7,7 @@ body {
   min-height: 100vh;
 }
 #main-container-im {
-  background-image: url(c2jihm1dlqp0skwv4ps2qkivx.jpg);
+  background-image: url(../images/c2jihm1dlqp0skwv4ps2qkivx.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -135,6 +135,7 @@ footer {
   justify-content: space-around;
   width: 85%;
   padding: 10px;
+  flex-wrap: wrap;
 }
 .footBar div:hover {
   cursor: pointer;

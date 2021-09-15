@@ -413,3 +413,8 @@ input {
 .hova:hover {
   cursor: pointer;
 }
+@media screen and (max-width: 1000px) {
+  #checkout6 {
+    width: 74%;
+  }
+}

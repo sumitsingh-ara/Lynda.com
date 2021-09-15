@@ -362,10 +362,11 @@ input {
   color: rgb(102, 98, 98);
 }
 .lowersecure {
-  width: 20%;
+  width: 30%;
   margin: auto;
   font-size: 18px;
   display: flex;
+  justify-content: center;
 }
 .newlock {
   font-size: 20px;
@@ -376,12 +377,14 @@ input {
 .hova:hover {
   cursor: pointer;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1000px) {
   .checkout,
   .checkout2,
   #checkout3,
   #checkout4,
-  .checkout8 {
-    width: 80%;
+  .checkout8,
+  #checkout6,
+  #checkout8 {
+    width: 74% !important;
   }
 }
