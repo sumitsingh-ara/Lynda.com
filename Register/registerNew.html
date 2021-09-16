@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Sign Up | LinkedIn</title>
+  <link rel="icon" href="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca">
+  <link rel="stylesheet" href="./Register-New.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+  <!-- <script src="./joinNow.js"></script> -->
+
+</head>
+
+<body>
+  <div  id="main_container">
+    <header>
+      <div class="logo-section">
+        <div class="logo-container">
+          <img onclick=pop() class="header-logo" src="../images/LinkedIn-Logo.wine.png" alt="" />
+          <h1 class="h1-title">Make the most of your professional life</h1>
+        </div>
+      </div>
+    </header>
+
+    <div  id="form-main-content">
+      <div class="form-wrap">
+        <div>
+         <div class="fnameLname">
+           <div> <label class="input-lable" for="">First Name</label>
+            <input id="firstName" type="text" placeholder="first name"/></div>
+           <div> <label class="input-lable" for="">Last Name</label>
+            <input id="lastName" type="text" placeholder="last name"/></div>
+         
+         </div>
+          <label class="input-lable" for="">Email or phone number</label>
+          <input id="email" type="text" placeholder="Email or Phone"/>
+          <label class="input-lable" for="">Password (6 or more characters)</label>
+          <input  id="password" type="password" placeholder="Create a password" />
+          <p class="join-form">By clicking Agree & Join, you agree to the LinkedIn <a href="">User Agreement</a>, <a href="">Privacy Policy</a>, and <a href="">Cookie Policy</a>.</p>
+          <p>
+            <div id="signedup">
+            </div>
+          <button class="sign-In" id="continue" type="submit" onclick='check()'>Agree & Join</button>
+        </div>
+        <div>
+          <div class="form-new">
+              Already on LinkedIn?<span>
+                <a href="../Login/signin.html">Sign in</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+<footer>
+    <div class="footBar">
+      <div><img src="../images/Screenshot_2.jpg"> </div>
+      <div>&copy;2021 </div>
+      <div>About</div>
+      <div>Accessibility</div>
+      <div>User Agreement</div>
+      <div>Privacy Policy</div>
+      <div>Cookie Policy</div>
+      <div>Copyright Policy</div>
+      <div>Brand Policy</div>
+      <div>Guest Control</div>
+      <div>Community Guidelines</div>
+      <div>Language &#9660;</div>
+    </div>
+</footer>
+  <script type="text/javascript" src="./Register-new.js"></script>
+</body>
+
+</html>

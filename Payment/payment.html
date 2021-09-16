@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./Payment-Style.css"/>
+    <link rel="icon" href="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Checkout Page</title>
+    <style>
+        .hova:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav-bar">
+        <div class="logo">
+            <div onclick="location.href='../Home/home.html'" class="linkedin-logo-sus hova">
+                in
+            </div>
+            <div class="secure">
+                <i class="material-icons lock">lock</i>
+                <div>SECURE CHECKOUT</div>
+                
+            </div>
+           
+        </div>
+        <i class="material-icons setting">settings</i>
+    </div>
+   <!-- Body 1st-->
+   <div class="checkout">   
+        <div>Checkout</div>
+        <div>Hello Person,you're a step closer to advancing your career!</div>
+   </div>
+   <!-- 2nd -->
+   <div class="checkout2">
+       <div id="number">1</div>
+       <div class="items">Items in your cart</div>
+   </div>
+   <!-- 3rd -->
+   <div id="checkout3">
+   </div>
+   <!-- 4th -->
+   <div id="checkout4">
+        <div class="frst">
+            <div class="est">Estimated tax (18%)</div>
+            <div id="totalsDone"></div>
+        </div>
+        <div class="scnd">
+            <div class="total">Today's total</div>
+            <div id="totalsDoneS"></div>
+        </div>
+   </div>
+   <!-- checkout 5 -->
+    <div class="checkout2">
+        <div id="number">2</div>
+        <div class="items">Payment</div>
+    </div>
+    <!-- Checout 6 credit cards section -->
+    <div onclick= remove() id="checkout6">
+       <div class="card-logo">
+        <img class="americanExpress" src="https://s1.q4cdn.com/692158879/files/images/brand_imagery/AXP_BlueBoxLogo_EXTRALARGEscale_RGB_DIGITAL_1600x1600.png" alt="">
+        <img class="masterCard" src="https://logos-world.net/wp-content/uploads/2020/09/Mastercard-Symbol.jpg" alt="">
+        <img class="masterCard" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Visa.svg/1200px-Visa.svg.png" alt="">
+       </div>
+       <!-- Input Part -->
+       <form onsubmit="submitForm(event)" >
+           <label >First name<sup class="blue">*</sup></label> <br>
+           <input onclick="fName()" id="firstName" type="text" required>
+           <div id="firstname" class="smallText"></div>
+           <label >Last name<sup class="blue">*</sup></label> <br>
+           <input onclick="lName()" id="lastName" type="text" required>
+           <div id="lastname" class="smallText"></div>
+           <label >Credit or debit card number<sup class="blue">*</sup></label> <br>
+           <input onclick="cNum()" id="creditNum" type="number" required>
+           <div id="creditnum" class="smallText"></div>
+           <div class="cvvExpireBox">
+                <div class="expiry">
+                    <label >Expiration date<sup class="blue">*</label>
+                    <input onclick="expDate()" id="expiryDate" type="month" placeholder="MM/YY" max="2025-12" required>
+                    
+                    <div id="expirydate" class="smallText"></div>
+                </div>
+                <div class="cvv">
+                    <label >Security Code<sup class="blue">*</label>
+                    <input onclick="cvvNum()" id="cvvNumber" type="password" required>
+                    <div id="cvvnumber" class="smallText"></div>
+                </div>
+           </div>
+           <!-- Country -->
+           <label >Country<sup class="blue">*</sup></label> <br>
+           <select name="Country" id="country" >
+               <option value="Singapore">Singapore</option>
+                <option value="India"selected>India</option>
+                <option value="Usa">Usa</option>
+                <option value="Nepal">Nepal</option>
+                <option value="China">China</option>
+                <option value="Pakistan">Pakistan</option>
+          </select>
+          <!-- postalBox -->
+          <div class="postalBox">
+            <div class="expiry">
+                <label >Postal code<sup class="blue">*</label>
+                <input onclick="pCode()" id="postalCode" type="number" required>
+                <div id="postalcode" class="smallText"></div>
+            </div>
+            <div class="cvv">
+                <label >GST<sup class="blue">*</label>
+                <input onclick="gstNum()" placeholder="Optional" id ="gstNumber" type="password">
+                <div id="gstnumber" class="smallText"></div>
+            </div>
+       </div>
+       <input type="submit" id="submit" value="Review order">
+       </form>
+       
+   </div>
+   <!-- checkout 7th -->
+    <div class="checkout2">
+        <div id="number">3</div>
+        <div class="items">Review your order</div>
+    </div>
+    <!-- checkout 8th -->
+    <div id="checkout8">
+        <div class="reviewBullet">
+            <p><li>You will <b>only be charged once</b> for the purchase of this course.</li></p>
+            <p><li>You will <b>have access</b> to this course through your LinkedIn Learning account.</li></p>
+            <p><li>Any future updates to this course will be automatically distributed to you <b>at no additional cost.</b>
+            </li></p>
+        </div>
+        <div class="generalInform">
+            <p>By placing this order you agree to our terms of service. To ensure continued service, we'll store and update (e.g., upon expiration) your payment method. Learn about our refund policy.</p>
+        </div>
+       <div > <button id="paymentDone" class="placeOrder">Place order</button> </div>
+       <div class="lowersecure"> 
+           <a href="https://" title="Click here to proceed to secure payment"> <div><i class="material-icons newlock">lock</i></div></a>
+          
+        <a href="" title="Click here to proceed to secure payment"><div>Secure Checkout</div></a> 
+    </div>
+   </div>
+   <!-- checkout 9 -->
+   <div style="height: 100px;">
+        
+   </div>
+   <script type="text/javascript" src="./Payment-Script.js"></script>
+</body>
+</html>
+

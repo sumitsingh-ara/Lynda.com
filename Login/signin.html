@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkedIn Login, Sign in | LinkedIn</title>
+    <link rel="stylesheet" href="./Sign-In.css" />
+    <link rel="icon" href="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main-container-im">
+        <header>
+            <div class="nav-base-im">
+                <a onclick=pop() class="nav-container-im">
+                    <img class="header-logo-im" src="https://static-exp1.licdn.com/sc/h/6363oetsghb0zmki2rtnh3f83"
+                        alt="Linkedin Logo" />
+                </a>
+            </div>
+        </header>
+
+        <div id="form-main-content">
+            <div class="form-wrap">
+                <div>
+                    <img class="form-logo" src="../images/Screenshot_2.jpg" alt="" />
+                </div>
+                <div>
+                    <h3 class="form-h1">Almost there! Sign in or create an account</h3>
+                </div>
+                <div class="input-cont">
+                    <div class="form-p-section">
+                        <p class="para">
+                            You can use the same email address and password <br />
+                            that you use on LinkedIn.com
+                        </p>
+                    </div>
+                    <div>
+                        <input id="email" type="text" placeholder="Email or Phone" />
+                        <br /><br />
+                        <input id="password" type="password" placeholder="Password" /><br /><br />
+                        <!-- <a id="signIn" onclick="login()">Sign in</a> -->
+                        <div id="wrongPassword"></div>
+                        <button id="login-btn">Sign In</button>
+                        
+                    </div>
+                    <div class="form-a">
+                        <a href="" id="forgot">Forgot password?</a>
+                    </div>
+                    <div class="form-new">
+                        <p>New to LinkedIn?<span><a href="../Register/registerNew.html"> Join now</a></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footBar">
+                <div><img src="../images/Screenshot_2.jpg" /></div>
+                <div>&copy;2021</div>
+                <div>About</div>
+                <div>Accessibility</div>
+                <div>User Agreement</div>
+                <div>Privacy Policy</div>
+                <div>Cookie Policy</div>
+                <div>Copyright Policy</div>
+                <div>Brand Policy</div>
+                <div>Guest Control</div>
+                <div>Community Guidelines</div>
+                <div>Language &#9660;</div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="./sign-in.js"></script>
+</body>
+
+</html>

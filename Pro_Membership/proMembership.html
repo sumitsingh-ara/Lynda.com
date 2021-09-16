@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./Pro-Membership.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="https://static-exp1.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    <title>Pro Membership</title>
+</head>
+<body>
+    <div class="navigation">
+        <div onclick="linkedinHome()" class="linkedin-logo-su hover">in</div>
+          <div onclick="linkedinHome()" class="learning-su hover">LEARNING</div>
+    </div>
+    <div class="padder"></div>
+    <div onclick= remove() id="checkout6">
+        <div class="card-logo">
+         <img class="americanExpress" src="https://s1.q4cdn.com/692158879/files/images/brand_imagery/AXP_BlueBoxLogo_EXTRALARGEscale_RGB_DIGITAL_1600x1600.png" alt="">
+         <img class="masterCard" src="https://logos-world.net/wp-content/uploads/2020/09/Mastercard-Symbol.jpg" alt="">
+         <img class="masterCard" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Visa.svg/1200px-Visa.svg.png" alt="">
+        </div>
+        <!-- Input Part -->
+        <form onsubmit="submitForm(event)" >
+            <label >First name<sup class="blue">*</sup></label> <br>
+            <input onclick="fName()" id="firstName" type="text" required>
+            <div id="firstname" class="smallText"></div>
+            <label >Last name<sup class="blue">*</sup></label> <br>
+            <input onclick="lName()" id="lastName" type="text" required>
+            <div id="lastname" class="smallText"></div>
+            <label >Credit or debit card number<sup class="blue">*</sup></label> <br>
+            <input onclick="cNum()" id="creditNum" type="number" required>
+            <div id="creditnum" class="smallText"></div>
+            <div class="cvvExpireBox">
+                 <div class="expiry">
+                     <label >Expiration date<sup class="blue">*</label>
+                     <input onclick="expDate()" id="expiryDate" type="month" placeholder="MM/YY" max="2025-12" required>
+                     
+                     <div id="expirydate" class="smallText"></div>
+                 </div>
+                 <div class="cvv">
+                     <label >Security Code<sup class="blue">*</label>
+                     <input onclick="cvvNum()" id="cvvNumber" type="password" required>
+                     <div id="cvvnumber" class="smallText"></div>
+                 </div>
+            </div>
+            <!-- Country -->
+            <label >Country<sup class="blue">*</sup></label> <br>
+            <select name="Country" id="country" >
+                <option value="Singapore">Singapore</option>
+                 <option value="India"selected>India</option>
+                 <option value="Usa">Usa</option>
+                 <option value="Nepal">Nepal</option>
+                 <option value="China">China</option>
+                 <option value="Pakistan">Pakistan</option>
+           </select>
+           <!-- postalBox -->
+           <div class="postalBox">
+             <div class="expiry">
+                 <label >Postal code<sup class="blue">*</label>
+                 <input onclick="pCode()" id="postalCode" type="number" required>
+                 <div id="postalcode" class="smallText"></div>
+             </div>
+             <div class="cvv">
+                 <label >GST<sup class="blue">*</label>
+                 <input onclick="gstNum()" placeholder="Optional" id ="gstNumber" type="password">
+                 <div id="gstnumber" class="smallText"></div>
+             </div>
+        </div>
+        <input type="submit" id="submit" value="Review order">
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+<script>
+    function linkedinHome(){
+        window.location.href ="../Home/home.html"
+    }
+
+        function submitForm(e){
+            e.preventDefault();
+            //console.log(e);
+            var proMembershipDetails =[];
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var creditNumber = document.getElementById('creditNum').value;
+            var expiryDate = document.getElementById('expiryDate').value;
+            var cvvNumber = document.getElementById('cvvNumber').value;
+            var country = document.getElementById('country').value;
+            var postalCode = document.getElementById('postalCode').value;
+            var gstNumber = document.getElementById("gstNumber").value;
+           let obj={
+               FirstName:firstName,
+               LastName:lastName,
+               creditDebitDetail:creditNumber,
+               ExpiryDate:expiryDate,
+               CVV:cvvNumber,
+               Country:country,
+               PostalCode:postalCode,
+               GSTdetails:gstNumber,
+           }
+            proMembershipDetails.push(obj);
+           localStorage.setItem('proMembers',JSON.stringify(proMembershipDetails));
+           function alertCustomer(){
+            alert("Pro Membership Activated!");
+                window.location.href ="../Home/home.html"
+           }
+           setTimeout(alertCustomer,2000)
+        }
+
+      
+</script>
